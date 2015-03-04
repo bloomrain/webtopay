@@ -1,7 +1,7 @@
 class WebToPay::Payment
   ATTRIBUTES = [:projectid, :orderid, :lang, :amount, :currency, :accepturl, :cancelurl, :callbackurl,
-                :country, :paytext, :p_email, :p_name, :p_surname, :payment, :test, :version]
-  UNDERSCORE_MAPPINGS = {pname: :p_name, pemail: :p_email, psurname: :p_surname}
+                :country, :paytext, :p_email, :p_name, :p_surname, :payment, :test, :version, :only_payments]
+  UNDERSCORE_MAPPINGS = {pname: :p_name, pemail: :p_email, psurname: :p_surname, onlypayments: :only_payments}
   attr_accessor *ATTRIBUTES
 
   extend ActiveModel::Naming
